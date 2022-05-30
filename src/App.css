@@ -36,3 +36,133 @@
     transform: rotate(360deg);
   }
 }
+
+/* welcome  text*/
+
+.text_conntainer1{
+  text-align: center;
+  text-transform: uppercase;
+  /* color: #06042e; */                                                 
+  color: aliceblue;
+  font-size:fantasy;
+  background-image: url("https://image.shutterstock.com/image-photo/light-bulbs-on-dark-wooden-260nw-354086042.jpg");
+  width: 27rem;
+  
+  margin-left: 27rem;
+  margin-top: 8rem;
+  text-shadow: 4px 4px 5px 	#cd853f;
+  
+}
+
+/* navbat */
+
+.brand-title{
+  font-size: 1.5rem;
+  color: rgb(238, 231, 231);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.text_container{
+  text-align: center;
+  text-transform: uppercase;
+  color: #06042e;
+  font-size:serif;
+  margin-top: 2rem;
+}
+
+/* start */
+.text1{
+  text-align: center;
+  text-transform: uppercase;
+  color: #06042e;
+  font-size:serif;
+  font-size: 20px;
+  text-shadow: 4px 4px 5px 	#693d0b;
+  margin-top: 2rem
+
+}
+/* button start */
+
+.button_info{
+ 
+  width: 6rem;
+  height: 2rem;
+  font-size: 18px;
+  margin-top: 1rem
+}
+
+/* questionss */
+
+.mb-5{
+  margin-top: 8rem;
+  font-size: 2rem;
+  height: 2rem;
+   color: #06042e;
+   font-family:fantasy;
+}
+
+/* opctions */
+
+.control{
+  margin-top: 2rem;
+  font-size: 23px;
+  height: 2rem;
+   color: #06042e;
+   font-family:fantasy;
+}
+
+.button_is_link{
+  width: 6rem;
+  height: 2rem;
+  font-size: 18px;
+  margin-top: 1rem
+}
+
+
+
+.result{
+  margin-top: 6rem;
+  font-size: 30px;
+  height: 2rem;
+   color: #06042e;
+   font-family:fantasy;
+}
+
+
+.button_mr-2{
+  margin-top: 1rem;
+  font-size: 18px;
+  height: 3rem;
+   color: #0d0b36;
+   font-family:fantasy;
+}
+
+.button_is-success{
+  margin-top: 1rem;
+  font-size: 18px;
+  height: 3rem;
+   color: #0d0b36;
+   font-family:fantasy;
+}
+
+.has-background-link{
+  font-size: 18px;
+  height: 3rem;
+   color: #22e40d;
+   font-family:fantasy;
+}
+
+.has-background-danger{
+  margin-top: 3rem;
+  font-size: 18px;
+  height: 3rem;
+   color: #e4630d;
+   font-family:fantasy;
+}
+.modal-card-title{
+  margin-top: 3rem;
+  font-size: 18px;
+  height: 3rem;
+   color: #1123eb;
+   font-family:fantasy;
+}

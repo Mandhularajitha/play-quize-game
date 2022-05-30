@@ -1,0 +1,95 @@
+.login-main-container {
+    min-height: 93vh;
+   margin-left: 29rem;
+}
+
+.login-container {
+    background-color: var(--gray-200);
+    width: 25rem;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid ;
+    margin-top: 3rem;
+    background-color: rgb(157, 165, 162);
+}
+
+.mail-input,.pass-input {
+    padding: .4rem;
+    margin: .1rem 0 1rem 0;
+}
+
+.checkbox-inpt {
+    width: 1rem;
+    height: 1rem;
+}
+
+.logo-img {
+    width: 5vh;
+}
+
+.color{
+    color: var(--blue-600);
+}
+
+.pass-input{
+    margin-left: 7rem;
+    margin-top: -4rem;
+    padding-right: 1.0rem ;
+}
+
+.eye-style{
+    width: 1.8rem;
+    padding: 2px;
+    right: 4px;
+    margin-top: .2rem;
+}
+.login_acount{
+    padding: 20px;
+}
+.password_int{
+    display: inline-block;
+    margin-right: 13rem;
+    margin-bottom: -1rem;
+    margin-top:1rem;
+}
+
+/*          Signup in           */
+
+.signup-container {
+    background-color: var(--gray-200);
+    border-radius: 1rem;
+    width: 25rem;
+    padding: 1rem 2rem;
+    border: 1px solid ;
+    background-color: rgb(157, 165, 162);
+    margin-top: 3rem;
+    
+}
+
+.input {
+    padding: .5rem;
+    margin-bottom: .8rem;
+}
+
+.name{
+    display: flex;
+    gap: 1rem;
+}
+.checkbox-input {
+    width: 1rem;
+    height: 1rem;
+}
+
+.width{
+    width: 10rem;
+}
+
+.txt{
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .log-container {
+        min-height: 79vh;
+    }
+}
