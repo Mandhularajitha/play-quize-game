@@ -1,56 +1,111 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import { Navigation } from "../../Components";
-import "./LoginSign.css";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/authContext";
+import { useState } from "react";
+import axios from "axios";
+import { userSignUp } from "../../features/auth/authSlice";
+import { useDispatch } from "react-redux";
 
+export const Signup = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
+  const { auth, setAuth } = useAuth();
+  const [erorMsg, setErrorMsg] = useState(false);
+  const [userData, setUserData] = useState({
+    firstName: "",
+    lastName: "",
+    username: "",
+    password: "",
+  });
 
-const Signup = () => {
+  const handelUserInput = (e) => {
+   const {name,value}= e.target;
+   console.log(name,value,"raji");
+   setUserData({...userData,[name]:value});
+   setErrorMsg(false)
+  };
 
-    return (
-        <>
-            <div>
-            </div>
-            <div className="login-main-container flex-center">
-                <form className="log-container">
-                    <div className="signup-container flex-column">
-                        <h3 className="text-align mtb-16">Signup</h3>
-                        <label className="txt">Email address</label>
-                        <input className="email-input input" type="email" placeholder="abc@gmail.com" />
-                        <div className="name">
-                            <section>
-                                <label className="txt">First name</label>
-                                <input className="input width" type="text" placeholder="Enter First Name" />
-                            </section>
-                            <section>
-                                <label className="txt">Last name</label>
-                                <input className="input width" type="text" placeholder="Enter Last Name" />
-                            </section>
-                        </div>
-                        <div className="name">
-                            <section>
-                                <label className="txt">Password</label>
-                                <input className="input width" type="password" placeholder="Enter Password" />
-                            </section>
-                            <section>
-                                <label className="txt">Confirm Password</label>
-                                <input className="input width" type="password" placeholder="Confirm Password" /><br />
-                            </section>
-                        </div>
-                        <div>
-                            <input className="checkbox-input" type="checkbox" />
-                            <label className="txt">I accept all Terms & Conditions</label><br />
-                        </div>
-                        <button className="mtb-16 w-100 ptb-8">
-                            Create New Account
-                        </button>
-                        <label className="text-align">Already a member?
-                            <Link to="/login" className="color"><strong> Login</strong></Link>
-                        </label>
-                    </div>
-                </form>
-            </div>
-        </>
-    )
-}
+  const signUpHandler = async (e) => {
+   
+   try{
+    e.preventDefault()
+    console.log(userData,".....");
+     const result = await dispatch(userSignUp(userData))
+     navigate("/")
+   }catch(err){
+     console.log(err);
+   }
+  };
 
-export { Signup }
+  // console.log(userData);
+  
+  return (
+    <div className="form-container">
+      <div className="validation">
+        <h2>Sign Up</h2>
+        <form action="">
+          <div>
+            <input
+              type="text"
+              className="form-input"
+              placeholder="Enter your First Name "
+              name="firstName"
+              onChange={handelUserInput}
+              value={userData.firstName}
+            />
+          </div>
+
+          <div>
+            <input
+              type="text"
+              className="form-input"
+              name="lastName"
+              placeholder="Enter your Last Name"
+              onChange={handelUserInput}
+              value={userData.lastName}
+            />
+          </div>
+
+          <div>
+            <input
+              type="username"
+              className="form-input"
+              name="username"
+              placeholder="Enter your email"
+              onChange={handelUserInput}
+              value={userData.username}
+            />
+          </div>
+
+          <div>
+            <input
+              type="password"
+              className="form-input"
+              placeholder="Enter your password"
+              name="password"
+              onChange={handelUserInput}
+              value={userData.password}
+            ></input>
+          </div>
+
+          <div style={{ color: "red" }}>
+            <p>{erorMsg && "Enter the fields"}</p>
+          </div>
+
+          <div>
+            <Link to="/login">
+              <p> Already have an account?</p>
+            </Link>
+
+            <button
+              className="remove-card-btn"
+              onClick={(e) => signUpHandler(e)}
+            >
+              Sign up
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};

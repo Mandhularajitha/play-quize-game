@@ -12,6 +12,10 @@ const Start = ({ onQuizStart }) => {
           <h1 className='text_container'>Start the quiz</h1>
           <p className='text1'>Good luck!</p>
           <button className="button_info" onClick={onQuizStart}>Start</button>
+
+          {/* <button  className="button_info" onClick={() => authToken?{onQuizStart}:navigate("/login")}>
+                  AddToCart</button> */}
+
         </div>
       </div>
     </div>

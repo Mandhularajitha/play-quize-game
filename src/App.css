@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #dae1f0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,12 +42,12 @@
 .text_conntainer1{
   text-align: center;
   text-transform: uppercase;
+  font-size:serif;
   /* color: #06042e; */                                                 
   color: aliceblue;
   font-size:fantasy;
   background-image: url("https://image.shutterstock.com/image-photo/light-bulbs-on-dark-wooden-260nw-354086042.jpg");
   width: 27rem;
-  
   margin-left: 27rem;
   margin-top: 8rem;
   text-shadow: 4px 4px 5px 	#cd853f;
@@ -109,6 +109,7 @@
   height: 2rem;
    color: #06042e;
    font-family:fantasy;
+   
 }
 
 .button_is_link{
@@ -117,8 +118,6 @@
   font-size: 18px;
   margin-top: 1rem
 }
-
-
 
 .result{
   margin-top: 6rem;
@@ -165,4 +164,8 @@
   height: 3rem;
    color: #1123eb;
    font-family:fantasy;
+}
+
+.loginhandl{
+  color: #e9eaf0;
 }

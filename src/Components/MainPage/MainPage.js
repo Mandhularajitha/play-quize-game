@@ -16,6 +16,7 @@ const MainPage = () => {
   const [showModal, setShowModal] = useState(false);
   const [time, setTime] = useState(0);
   
+  
   useEffect(() => {
     if(step === 3) {
       clearInterval(interval);
@@ -43,7 +44,6 @@ const MainPage = () => {
 
     <div className="App">
      
-
       {step === 1 && <Start onQuizStart={quizStartHandler} />}
       {step === 2 && <Question 
         data={quizData.data[activeQuestion]}

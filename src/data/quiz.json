@@ -7,9 +7,9 @@
         "answer": "mica"
       },
       {
-        "question": "India's first Technicolor film ____ in the early 1950s was produced by ____",
-        "choices": ["'Jhansi Ki Rani', Sohrab Modi", "'Jhansi Ki Rani', Sir Syed Ahmed", "'Mirza Ghalib', Sohrab Modi", "'Mirza Ghalib', Munshi Premchand"],
-        "answer": "Jhansi Ki Rani', Sohrab Modi"
+        "question": "To which country does the present UN Secretary-General belongs?",
+        "choices": ["Ghana","South Korea","Spain","Portugal"],
+        "answer": "Portugal"
       },
       {
         "question": "Logarithm tables were invented by",
@@ -27,9 +27,9 @@
         "answer": "energy"
       },
       {
-        "question": "Kemal Ataturk was",
-        "choices": ["the first President of Independent Kenya", "the founder of modern Turkey", "revolutionary leader of Soviet Union", "None of the above"],
-        "answer": "the founder of modern Turkey"
+        "question": "The number of already named bones in the human skeleton is",
+        "choices": ["200", "206", "212", "218"],
+        "answer": "206"
       },
       {
         "question": "The Scottish bacteriologist who discovered penicillin was",
