@@ -1,82 +1,96 @@
-import React, { useState } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
-// import { useAuth } from "../../Context/authContext";
-import "./LoginSign.css";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
+import "./Login.css";
+// import  {useAuth}  from "../../context/authContext";
+import { userLogin } from "../../features/auth/authSlice";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
-//   const { login, setLogin } = useAuth();
-  const location = useLocation();
+  const [userDetails, setUserDetails] = useState({email: "", password: "" });
+
+  // const { auth, setAuth } = useAuth();
+
   const navigate = useNavigate();
-  const [hidden, setHidden] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
 
+  const dispatch = useDispatch();
+
+  const onChangehandler = (e) => {
+    const { name, value } = e.target;
+    setUserDetails({ ...userDetails, [name]: value });
+    
+  };
+ 
+  const testHandler = async (e) => {
+    try {
+      e.preventDefault();
+      const res = await dispatch(
+        userLogin({ email: 'raji', password: 'raji123' })
+      );
+      navigate("/")
+    } catch (error) {
+      console.log(error);
+    }
+    e.preventDefault();
+   
+      e.preventDefault();
+   
+  };
+
+  const handelLogin = async (e) => {
+    try {
+      e.preventDefault();
+      const res = await dispatch(
+        userLogin(userDetails)
+      );
+      navigate("/")
+    } catch (error) {
+      console.log(error);
+    }
+    
+  };
+  
   return (
-    <>
-      <div></div>
-      <form className="login-main-container flex-column jstfy-ctnt-center align-itm-center">
-        <div className="login-container">
-          <h3 className="text-align mtb-16">Login</h3>
-          <section className="flex-column">
-            <label htmlFor="/">Email address</label>
+    <div className="form-container">
+      <div className="validation">
+        <h2>Login</h2>
+        <form action="">
+          <div className="input-wrapper">
             <input
-              className="mail-input"
+              name="email"
               type="email"
-              placeholder="abc@gmail.com"
-              defaultValue={hidden ? "adarshbalika@gmail.com" : ""}
+              className="form-input"
+              placeholder="Enter your email"
+              onChange={(e) => onChangehandler(e)}
             />
-            
-            <label className="password_int" htmlFor="/">Password</label>
-            <section className="relative">
-              <input
-                className="pass-input"
-                type={showPassword ? "text" : "password"}
-                placeholder="*****"
-                defaultValue={hidden ? "1234adarsh" : ""}
-              />
-
-              {showPassword ? (
-                <img
-                  onClick={() => {
-                    setShowPassword(showPassword ? false : true);
-                  }}
-                  className="eye-style absolute"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-5K6C73npel6hwg6iTFmOpiSdNVG4HUjG1g&usqp=CAU"
-                  alt="show password"
-                />
-              ) : (
-                <img
-                  onClick={() => {
-                    setShowPassword(showPassword ? false : true);
-                  }}
-                  className="eye-style absolute"
-                />
-              )}
-            </section>
-          </section>
-          <section className="flex jstfy-ctnt-spc-between">
-            <label htmlFor="/">
-              <input className="checkbox-inpt" type="checkbox" />
-              Remember me
-            </label>
-            <Link to="/Forget" className="color">
-              Forget Password?
-            </Link>
-          </section>
-          <Link to="/text-editor">
-            <button className="w-100 ptb-8">Login</button>
-          </Link>
-          <br />
-
-          <div className="login_acount">
-            <button className="w-100 mtb-16 ptb-8">Login as a Guest</button>
-
-            <Link className="color block text-align" to="/Signup">
-              Create New Account
-            </Link>
           </div>
-        </div>
-      </form>
-    </>
+          <div className="input-wrapper">
+            <input
+              className="form-input"
+              name="password"
+              placeholder="Enter your password"
+              onChange={(e) => onChangehandler(e)}
+            />
+          </div>
+
+          <div className="form-footer-one">
+            <button className="remove-card-btn" onClick={(e) => testHandler(e)}>
+              Guest Login
+            </button>
+            <button className="remove-card-btn" onClick={(e) => handelLogin(e)}>
+              Login
+            </button>
+          </div>
+
+          <div className="form-footer">
+            <p> Don't have an account ?</p>
+
+            <Link to="/signup">Create an account</Link>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 };
 

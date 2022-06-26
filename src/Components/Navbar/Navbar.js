@@ -5,14 +5,12 @@ export const Navbar = () => {
   return (
     <>
 
-      <nav class="navbar">
-        <Link to="/"><div class="brand-title">Play Quize</div></Link>
-        <a href="#" class="toggle-button">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+      <nav className="navbar">
+        <Link to="/"><div className="brand-title">Play Quize</div></Link>
+        <a href="#" className="toggle-button">
+        <Link to="/login"><h className="loginhandl" href="#">Login</h></Link>
         </a>
-        <div class="navbar-links">
+        <div className="navbar-links">
           <ul>
             <Link to="/login"><li><a href="#">Login</a></li></Link>
             
