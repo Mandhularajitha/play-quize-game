@@ -13,6 +13,7 @@ const Question = ({ data, onAnswerUpdate, numberOfQuestions, activeQuestion, onS
   }, [data]);
 
   const changeHandler = (e) => {
+    console.log(e,"e");
     setSelected(e.target.value);
     if(error) {
       setError('');
