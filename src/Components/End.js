@@ -14,7 +14,7 @@ const End = ({ results, data, onReset, onAnswersCheck, time }) => {
     });
     setCorrectAnswers(correct);
     
-  }, []);
+  }, [data,results]);
 
   return(
     <div className="card">

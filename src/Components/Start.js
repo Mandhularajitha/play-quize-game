@@ -1,10 +1,10 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Start = ({ onQuizStart }) => {
   return(
     <div className="card">
       <div className="topnav">
-      <a className="navbar" href="#home"></a>
+      <Link className="navbar" to="/"></Link>
       </div>
       <div className="card-content">
         <div className="content">
