@@ -35,7 +35,6 @@ export const Signup = () => {
    }
   };
 
-  // console.log(userData);
   
   return (
     <div className="form-container">
