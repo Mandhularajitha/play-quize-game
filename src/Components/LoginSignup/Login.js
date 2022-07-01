@@ -1,16 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
 import "./Login.css";
-// import  {useAuth}  from "../../context/authContext";
 import { userLogin } from "../../features/auth/authSlice";
 import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [userDetails, setUserDetails] = useState({email: "", password: "" });
-
-  // const { auth, setAuth } = useAuth();
 
   const navigate = useNavigate();
 
@@ -28,6 +24,7 @@ const Login = () => {
       const res = await dispatch(
         userLogin({ email: 'raji', password: 'raji123' })
       );
+      console.log(res)
       navigate("/")
     } catch (error) {
       console.log(error);
@@ -44,6 +41,7 @@ const Login = () => {
       const res = await dispatch(
         userLogin(userDetails)
       );
+      console.log(res)
       navigate("/")
     } catch (error) {
       console.log(error);
