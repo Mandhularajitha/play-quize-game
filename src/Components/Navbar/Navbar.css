@@ -68,7 +68,7 @@ body {
     position: relative;
     left:-2rem ;
     top: 1  rem;
-    color: red;
+    color: rgb(239, 243, 243);
     text-decoration: none   ;
 
 }
@@ -103,5 +103,8 @@ body {
 
     .navbar-links.active {
         display: flex;
+    }
+    .loginhandl{
+        color: aliceblue;
     }
 }

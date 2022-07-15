@@ -42,7 +42,7 @@ export const Signup = () => {
         <h2>Sign Up</h2>
         <form action="">
           <div>
-            <input
+            <input 
               type="text"
               className="form-input"
               placeholder="Enter your First Name "
