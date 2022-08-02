@@ -25,7 +25,7 @@ const Login = () => {
         userLogin({ email: 'raji', password: 'raji123' })
       );
       console.log(res)
-      navigate("/")
+      navigate("/rulespage")
     } catch (error) {
       console.log(error);
     }
@@ -42,7 +42,7 @@ const Login = () => {
         userLogin(userDetails)
       );
       console.log(res)
-      navigate("/")
+      navigate("/rulespage")
     } catch (error) {
       console.log(error);
     }
