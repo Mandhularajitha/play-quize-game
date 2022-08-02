@@ -35,11 +35,6 @@
         "question": "The Scottish bacteriologist who discovered penicillin was",
         "choices": ["Alexander Fleming", "Albert Einstein", "Archimeder", "Aryabhatta"],
         "answer": "Alexander Fleming"
-      },
-      {
-        "question": "When is the World's Diabetes Day?",
-        "choices": ["14th November", "11th December", "15th October", "1st July"],
-        "answer": "14th November"
       }
     ]
   }

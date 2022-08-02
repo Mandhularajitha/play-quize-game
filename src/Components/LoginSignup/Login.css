@@ -51,4 +51,5 @@
 .remove-card-btn{
     width: 8rem;
     height: 2rem;
+    cursor: pointer;
 }
